@@ -15,7 +15,7 @@ if [[ "${1}" =~ "--" ]]; then
     COMMAND="node $@";
 fi;
 
-exec docker run --rm ${TTY_ARGS} \
+exec docker run --rm ${TTY_ARGS} --net host  \
     -u $(id -u):$(id -g) \
     -w ${PWD} \
     --mount type=tmpfs,destination=/.npm \
