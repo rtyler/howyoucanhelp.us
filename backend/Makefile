@@ -20,6 +20,9 @@ check: depends
 clean:
 	rm -rf node_modules
 
-.PHONY: all depends build clean check
+watch:
+	jest --watchAll
+
+.PHONY: all depends build clean check watch
 
 # vim: set et
