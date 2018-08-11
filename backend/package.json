@@ -1,0 +1,24 @@
+{
+  "name": "hychu-backend",
+  "version": "1.0.0",
+  "description": "How You Can Help Us backend services",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtyler/howyoucanhelp.us.git"
+  },
+  "author": "R Tyler Croy",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rtyler/howyoucanhelp.us/issues"
+  },
+  "homepage": "https://github.com/rtyler/howyoucanhelp.us#readme",
+  "devDependencies": {
+    "@types/feathersjs__feathers": "^3.0.4",
+    "typescript": "^3.0.1",
+    "winston": "^3.0.0"
+  }
+}

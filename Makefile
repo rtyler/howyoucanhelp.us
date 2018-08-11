@@ -1,28 +1,22 @@
-#
-# Root Makefile to make the building and testing of this project easier
-# regardless of *nix based platform
 
-PATH:=./node_modules/.bin:./tools:$(PATH)
+all: check build
 
-all: build check
+depends:
+	$(MAKE) -C frontend $@
+	$(MAKE) -C backend $@
 
-depends: package.json package-lock.json
-	if [ ! -d node_modules ]; then \
-		npm install; \
-	fi;
+build:
+	$(MAKE) -C frontend $@
+	$(MAKE) -C backend $@
 
-build: depends
-	webpack-cli
-
-check: depends
-	jest
-
-run: depends
-	webpack-dev-server --mode=development
+check:
+	$(MAKE) -C frontend $@
+	$(MAKE) -C backend $@
 
 clean:
-	rm -rf dist
-	rm -f src/*.js
+	$(MAKE) -C frontend $@
+	$(MAKE) -C backend $@
+
 
 .PHONY: all depends build clean check
 
