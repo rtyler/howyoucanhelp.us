@@ -2,9 +2,14 @@
   "compilerOptions": {
     "module" : "none",
     "outDir": "./dist/",
+    "skipLibCheck": true,
     "noImplicitAny": true,
     "module": "es6",
     "target": "es2015",
-    "allowJs": true
-  }
+    "allowJs": true,
+    "sourceMap": true
+  },
+  "include": [
+      "./src/**/*"
+  ]
 }
