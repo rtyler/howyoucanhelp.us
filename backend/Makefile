@@ -23,6 +23,13 @@ clean:
 watch:
 	jest --watchAll
 
+container: Dockerfile
+	docker build -t howyoucanhelpus.azurecr.io/webapp:latest .
+
+deploy: container
+	docker push howyoucanhelpus.azurecr.io/webapp:latest && \
+		az webapp restart  -n howyoucanhelpus-docker -g hychu
+
 .PHONY: all depends build clean check watch
 
 # vim: set et
