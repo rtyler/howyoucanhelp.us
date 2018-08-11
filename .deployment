@@ -1,3 +1,2 @@
 [config]
-project = backend
-command = npm start
+project = ./backend

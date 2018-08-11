@@ -1,4 +1,5 @@
-const feathers = require('@feathersjs/feathers');
+
+import feathers from '@feathersjs/feathers';
 
 // import express from '@feathersjs/express';
 // import from '@featherjs/configuration'
