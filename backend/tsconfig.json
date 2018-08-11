@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "module" : "none",
-    "outDir": "./dist/",
+    "alwaysStrict" : true,
+    "module" : "commonjs",
     "skipLibCheck": true,
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es2018",
-    "allowJs": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "importHelpers" : true,
+    "target": "es5",
     "sourceMap": true
   },
   "include": [
