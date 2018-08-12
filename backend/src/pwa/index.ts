@@ -1,4 +1,6 @@
-import feathers from '@feathersjs/feathers'
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import feathers from '@feathersjs/feathers';
 
 const app : any = feathers();
 

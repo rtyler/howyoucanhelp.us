@@ -13,6 +13,7 @@ depends: package.json package-lock.json
 
 build: depends
 	tsc
+	webpack-cli
 
 check: depends
 	jest
@@ -22,6 +23,12 @@ clean:
 
 watch:
 	jest --watchAll
+
+watch-compile:
+	tsc -w
+
+watch-webpack: build
+	webpack-dev-server
 
 container: Dockerfile
 	docker build -t howyoucanhelpus.azurecr.io/webapp:latest .
