@@ -5,7 +5,8 @@ WORKDIR ${APP_DIR}
 
 ADD package*json ${APP_DIR}/
 
-RUN npm install
+RUN npm install --verbose
+RUN ./node_mobules/.bin/webpack-cli --verbose
 
 # Doing a multi-stage build to reset some stuff for a smaller image
 FROM node:9-alpine
@@ -18,6 +19,7 @@ COPY --from=builder ${APP_DIR} .
 COPY src ${APP_DIR}/src
 COPY config ${APP_DIR}/config
 COPY public ${APP_DIR}/public
+COPY public/dist/index.html ${APP_DIR}/public
 
 EXPOSE 3030
 
