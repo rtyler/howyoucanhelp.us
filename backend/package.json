@@ -9,6 +9,9 @@
     "test": "jest",
     "start": "node src/"
   },
+  "engines" : {
+      "node": ">= 8.11.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rtyler/howyoucanhelp.us.git"
